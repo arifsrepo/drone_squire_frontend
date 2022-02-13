@@ -1,0 +1,17 @@
+.mcarusel{
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 320px;
+}
+
+.mcarusel_img{
+    width: 50%;
+    height: auto;
+}
+
+.mcarusel_text{
+    padding: 20px;
+}

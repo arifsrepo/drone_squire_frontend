@@ -1,0 +1,22 @@
+.features{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.features_sub{
+    padding: 40px;
+    background-color: #1c54e2;
+    border-radius: 5px;
+}
+
+.feature-box{
+    height: 100px;
+    width: 100px;
+    color: white;
+}
+
+.feature-icon{
+    /* font-size: 45px; */
+    font-size: 1.125rem;
+    color: #1c54e2;
+}

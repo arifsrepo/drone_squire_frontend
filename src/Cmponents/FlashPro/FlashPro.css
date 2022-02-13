@@ -1,0 +1,63 @@
+.flashproduct{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.flashproduct_sub{
+    width: 50%;
+    text-align: left;
+}
+
+.flashproduct_title{
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #1c54e2;
+}
+
+.sub_text{
+    padding: 30px;
+}
+
+.flashpro_icon_div{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.flash_icon_holder{
+    font-size: 25px;
+    color: #1c54e2;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #1c54e2;
+  }
+
+  .btn:hover {
+    background-color: #1c54e2; 
+    color: white; 
+  }
+
+  .flashpro_img{
+      width: 80%;
+      height: auto;
+  }
+  
+@media screen and (max-width: 1000px) {
+    .flashproduct_sub{
+        min-width: 500px;
+    }
+}

@@ -1,0 +1,49 @@
+.allproducts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.allprotext{
+    width: 90%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    color: #51628f;
+}
+
+.btn_product{
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #1c54e2;
+}
+
+.btn_product:hover {
+  background-color: #1c54e2; 
+  color: white; 
+}
+
+.explore_btn_div{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+  
+@media screen and (max-width: 770px) {
+    .mcarusel{
+        max-width: 250px;
+    }
+    .allproducts{
+        justify-content: center;
+    }
+}
