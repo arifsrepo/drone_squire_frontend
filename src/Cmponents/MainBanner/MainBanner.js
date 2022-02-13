@@ -10,7 +10,7 @@ const MainBanner = () => {
                             <div className="text_holder_main">
                                 <p>Taking a New Approach to Airspace</p>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi labore porro laudantium odit nostrum voluptate nisi mollitia molestiae saepe molestias officia animi ratione sint pariatur tenetur maiores assumenda enim, totam cupiditate voluptatem, error inventore. A enim accusamus dicta corporis in?</p>
+                            <p className="banner_info_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi labore porro laudantium odit nostrum voluptate nisi mollitia molestiae saepe molestias officia animi ratione sint pariatur tenetur maiores assumenda enim, totam cupiditate voluptatem, error inventore. A enim accusamus dicta corporis in?</p>
                         </div>
                         <div className="mainbanner_sub carusel_holder">
                             <Carousel fade>

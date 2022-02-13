@@ -32,3 +32,44 @@
     font-weight: 800;
     color: #51628f;
 }
+
+.banner_info_text{
+    text-align: left;
+}
+
+  
+@media screen and (max-width: 1250px) {
+    .mainbanner{
+        
+    }
+    .text_holder_main{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mainbanner{
+        
+    }
+    .text_holder_main{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .mainbanner{
+        flex-wrap: wrap;
+    }
+    .text_holder_main{
+        font-size: 30px;
+    }
+    .mainbanner_sub{
+        width: 100%;
+    }
+    .banner_info_text{
+        font-size: 12px;
+    }
+    .carusel_holder{
+        margin-bottom: 25px;
+    }
+}

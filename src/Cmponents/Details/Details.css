@@ -1,0 +1,25 @@
+.details_img_div{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.details_img_style{
+    width: 80%;
+}
+
+.details_text_div{
+    text-align: left;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.details_text_div_sub{
+    margin-top: 30px;
+}
+
+.details_price{
+    color: blue;
+}

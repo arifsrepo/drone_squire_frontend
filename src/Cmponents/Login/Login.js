@@ -104,13 +104,13 @@ const Login = () => {
                                 <input onBlur={handlePassChange} className="input_basic" type="password" />
                                 <br />
                                 <br />
-                                <input className="login_btn" type="submit" value="Log In" />
-                                <br />
-                                <button onClick={handleGoogleLogin}>hhh</button>
                                 <Form.Check 
                                     onChange={toggling}
                                     label={'New User?'}
                                 />
+                                <input className="login_btn" type="submit" value="Log In" />
+                                <br />
+                                <button className="btn" onClick={handleGoogleLogin}> Google Login </button>
                             </div>
                         </form>
                     </Col>

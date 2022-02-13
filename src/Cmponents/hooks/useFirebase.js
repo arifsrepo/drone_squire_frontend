@@ -49,7 +49,6 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setUser(userCredential.user);
-                saveUser(email, name, address, number,'POST')
                 history.push('/');
             })
             .catch((error) => {
@@ -71,38 +70,6 @@ const useFirebase = () => {
                 setError(errorMessage);
             });
         }
-
-    const saveUser = ( email, displayName, address, number, method ) => {
-        const user = { email, displayName, address, number };
-        console.log(user)
-        fetch('https://aqueous-peak-41377.herokuapp.com/users', {
-        // fetch('http://localhost:5000/users', {
-            method:method,
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(user)
-        })
-        .then()
-    }
-
-    useEffect(() => {
-        if(user?.email){
-                fetch(`https://aqueous-peak-41377.herokuapp.com/userdetails?email=${user.email}`)
-                // fetch(`http://localhost:5000/userdetails?email=${user.email}`)
-                .then(res => res.json())
-                .then(details => {
-                    if(details?.email){
-                        if(!accountDetails?.email){
-                            setAccountDetails(details);
-                        }
-                    }
-                })
-                if(accountDetails?.email){
-                    setDetLoading(false)
-                }
-            }
-        },[user])
 
     if(detLoading){
         if(accountDetails?.email){
@@ -129,7 +96,6 @@ const useFirebase = () => {
         number,
         user,
         setUser,
-        saveUser,
         authloading,
         accountDetails,
         detLoading,

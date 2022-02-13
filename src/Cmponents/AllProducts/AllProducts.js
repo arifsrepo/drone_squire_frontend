@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import Product from '../Product/Product';
 import './AllProducts.css';
 
@@ -19,7 +20,7 @@ const AllProducts = () => {
                 <div  className="allproducts">
                     <p className="allprotext">Our Great Collection</p>
                     {
-                        products.map(product => <Product product={product}></Product>)
+                        products.map(product => <><NavLink className="details_link_style" to={`/details/${product._id}`}><Product product={product}></Product></NavLink></>)
                     }
                 </div>
                 <div className="explore_btn_div">
