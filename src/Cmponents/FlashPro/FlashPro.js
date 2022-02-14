@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import './FlashPro.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faWifi, faVideo } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const FlashPro = () => {
     return (
@@ -29,7 +30,9 @@ const FlashPro = () => {
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
-                    <button className="btn"> Buy Now</button>
+                    <div>
+                        <NavLink to="/details/6208bc6f9030e62d1c164e9a"><button className="btn"> Buy Now</button></NavLink>
+                    </div>
                 </div>
                 <div className="flashproduct_sub">
                     <img className="flashpro_img" src="https://i.ibb.co/R2TjszF/product-01-596x515.png" alt="" />

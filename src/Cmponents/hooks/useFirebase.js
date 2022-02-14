@@ -13,7 +13,6 @@ const useFirebase = () => {
     const [error, setError] = useState('');
     const [authloading, setAuthloading] = useState(true);
     const [detLoading, setDetLoading] = useState(true);
-    const [accountDetails, setAccountDetails] = useState({});
     const [name, setName] = useState('');
     const [token, setToken] = useState('');
     const history = '';
@@ -49,6 +48,7 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setUser(userCredential.user);
+                saveUser(email, name, address, number,'POST')
                 history.push('/');
             })
             .catch((error) => {
@@ -60,10 +60,23 @@ const useFirebase = () => {
             return signInWithEmailAndPassword(auth, email, password)
         }
 
+
+        
+    const saveUser = ( email, displayName, address, number, method ) => {
+        const user = { email, displayName, address, number, role: 'user' };
+        fetch('http://localhost:5000/users', {
+            method:method,
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(user)
+        })
+        .then()
+    }
+
     const logout = () => {
             signOut(auth).then(() => {
                 setUser({});
-                setAccountDetails({});
                 history.push('/');
             }).catch((error) => {
                 const errorMessage = error.message;
@@ -71,15 +84,7 @@ const useFirebase = () => {
             });
         }
 
-    if(detLoading){
-        if(accountDetails?.email){
-        setDetLoading(false);
-        }
-    }
-
-    console.log(user)
-
-    // console.log('Account Details From End Of Firebase : ', accountDetails);
+        console.log(user)
 
     return {
         googleSignIn,
@@ -96,8 +101,8 @@ const useFirebase = () => {
         number,
         user,
         setUser,
+        saveUser,
         authloading,
-        accountDetails,
         detLoading,
         setDetLoading,
         error,

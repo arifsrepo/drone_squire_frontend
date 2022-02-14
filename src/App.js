@@ -14,6 +14,7 @@ import Login from './Cmponents/Login/Login';
 import About from './Cmponents/About/About';
 import Order from './Cmponents/Order/Order';
 import Details from './Cmponents/Details/Details';
+import Admin from './Cmponents/Admin/Admin';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/order" element={<Order />} />
                   <Route path="/details/:detailsId" element={<Details />} />
+                  <Route path="/admin/*" element={<Admin />} />
                 </Routes>
                 <Footer></Footer>
               </>

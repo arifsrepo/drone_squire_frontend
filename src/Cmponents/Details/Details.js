@@ -8,7 +8,7 @@ import './Details.css';
 const Details = () => {
     const [drone, setDrone] = useState()
     const params = useParams();
-    const url = `http://localhost:5000/product/${params.detailsId}`;
+    const url = `https://warm-chamber-95461.herokuapp.com/product/${params.detailsId}`;
         
     useEffect(() => {
         fetch(url)

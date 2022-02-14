@@ -8,7 +8,7 @@ const AllProducts = () => {
     const [products, setProducts] = useState([])
   
     useEffect(() => {
-      fetch('http://localhost:5000/products')
+      fetch('https://warm-chamber-95461.herokuapp.com/products')
       .then(res => res.json())
       .then(products => setProducts(products))
     },[])
@@ -24,7 +24,7 @@ const AllProducts = () => {
                     }
                 </div>
                 <div className="explore_btn_div">
-                    <button className="btn_product">Explore More</button>
+                    <NavLink to="/shop"><button className="btn_product">Explore More</button></NavLink>
                 </div>
             </section>
         </Container>

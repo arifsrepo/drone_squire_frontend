@@ -14,6 +14,7 @@ const Login = () => {
     const handleSubmit = e => {
         e.preventDefault();
         if(toggler){
+            console.log('calling register')
             registerUser(email, password, address);
         } else {
             emailLogin(email, password)

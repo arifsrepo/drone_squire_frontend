@@ -17,6 +17,7 @@ const NavigationBarSticky = () => {
                         <NavLink className="nav_bar_link" to="/shop"> SHOP </NavLink>
                         <NavLink className="nav_bar_link" to="/about"> ABOUT US</NavLink>
                         <NavLink className="nav_bar_link" to="/login">LOGIN</NavLink>
+                        <NavLink className="nav_bar_link" to="/admin">ADMIN</NavLink>
                     </div>
                     <div className="nav_bar_sub_right">
                         <NavLink className="order_style" to="/order"><b><FontAwesomeIcon icon={faPlus} /> <span className="order_text">Make Order</span></b></NavLink>
